@@ -145,7 +145,7 @@ Routs: (with no SWAGGER)
   
   Python setup: https://www.python.org/downloads/
   
-  To stat app run the following commands:
+  To start app, run the following commands:
   - pip install -r requirements.txt (only for the first time)
   - python -m flask run 
 
