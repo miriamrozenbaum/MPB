@@ -15,26 +15,39 @@ In addition, I looked for easy to implement DB as a begginer in Python and Sqlit
 
 ## DB Design:
 
-### User table:
+#### User table:
   id : primeryKey
+  
   username: str
+  
   email: str
+  
   password: str (Hash)
+  
   created_date : date
  
-### Post table:
+#### Post table:
   id: primeryKey
+  
   titel: str
+  
   description: str
+  
   created_date: date
+  
   updated_date: date
+  
   created_user: ForeignKey to User.id
+  
   likes: int
   
-### Like table:
+#### Like table:
   id: primeryKey
+  
   post_id : ForeignKey to Post.id
+  
   user_id : ForeignKey to User.id
+  
   
 Arbitrary input rule:
   Post title need to be unique
