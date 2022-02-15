@@ -60,13 +60,13 @@ Routs: (with SWAGGER)
   http://127.0.0.1:5000/api/auth/login
   * register (POST) - add new User
     - body:
-      username
-      email
-      password
+        - username
+        - email
+        - password
     - response:
-      201 - create new user
-      400 - not valid data request
-      409 - data already exists
+        - 201 - create new user
+        - 400 - not valid data request
+        - 409 - data already exists
       
     
   http://127.0.0.1:5000/api/auth/register
