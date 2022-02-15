@@ -17,9 +17,13 @@ In addition, I looked for easy to implement DB as a begginer in Python and Sqlit
 
 *User table:
   id : primeryKey
+  
   username: str
+  
   email: str
+  
   password: str (Hash)
+  
   created_date : date
  
 *Post table:
