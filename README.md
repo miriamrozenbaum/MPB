@@ -49,8 +49,9 @@ In addition, I looked for easy to implement DB as a begginer in Python and Sqlit
   user_id : ForeignKey to User.id
   
   
-Arbitrary input rule:
-  Post title need to be unique
+  
+## Arbitrary input rule:
+  ### Post title need to be unique
   
 ## API documentation:
 
