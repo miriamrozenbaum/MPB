@@ -139,8 +139,11 @@ Routs: (with no SWAGGER)
         - 404 - like not found
      
 ## RUN Project:
-  - pip install -r requirements.txt (only first time)
-  - python -m flask run
+  You should have pip version 21.2.4 installed and Python 3.10.2
+  
+ * To stat app run the following commands:
+  - pip install -r requirements.txt (only for the first time)
+  - python -m flask run 
 
 ## TEST Project:
   Postman link: https://www.getpostman.com/collections/defe8d6cde59aa0e942f
