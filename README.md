@@ -13,7 +13,7 @@ I used Sqlite as database
 after a little research I figured that SQL DB is more suitable for SQLAlchemy ORM that works realy good with flask.
 In addition, I looked for easy to implement DB as a begginer in Python and Sqlite works very well for me the task definition
 
-##DB Design:
+## DB Design:
 
 *User table:
   id : primeryKey
@@ -39,9 +39,9 @@ In addition, I looked for easy to implement DB as a begginer in Python and Sqlit
 Arbitrary input rule:
   Post title need to be unique
   
-##API documentation:
+## API documentation:
 
-##Authentication API : http://127.0.0.1:5000/api/auth/
+### Authentication API : http://127.0.0.1:5000/api/auth/
 Routs: (with SWAGGER)
   http://127.0.0.1:5000/api/auth/login
   *register (POST) - add new User
@@ -65,7 +65,7 @@ Routs: (with SWAGGER)
       200 - login user
       401 - wrong credentials
       
-##Blog API : http://127.0.0.1:5000/api/posts/
+### Blog API : http://127.0.0.1:5000/api/posts/
 Routs: (with no SWAGGER)
   http://127.0.0.1:5000/api/posts/
   *get_posts (GET) - get all posts
@@ -137,11 +137,11 @@ Routs: (with no SWAGGER)
       401 - not authoraized
       404 - like not found
      
-#RUN Project:
+## RUN Project:
   - pip install -r requirements.txt (only first time)
   - python -m flask run
 
-#TEST Project:
+## TEST Project:
   Postman link: https://www.getpostman.com/collections/defe8d6cde59aa0e942f
   Also will shared by Email
   
