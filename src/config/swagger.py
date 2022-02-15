@@ -6,7 +6,7 @@ template = {
         "contact": {
             "responsibleOrganization": "",
             "responsibleDeveloper": "",
-            "email": "miriholden@gmail.com"
+            "email": "XXX@gmail.com"
         },
         "version": "1.0"
     },
