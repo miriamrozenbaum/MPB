@@ -41,8 +41,9 @@ def add_post():
     try:
         current_user = get_jwt_identity()
 
-        description = request.get_json().get('description', '')
-        titel = request.get_json().get('titel', '')
+        description = request.get_json().get('description', '').strip()
+        titel = request.get_json().get('titel', '').strip()
+
 
         if not validators.length(titel, min=1, max=50):
             return jsonify({
@@ -153,8 +154,8 @@ def edit_post(id):
         if not post:
             return jsonify({'message': 'Not authorized to edit someone else post'}), HTTP_401_UNAUTHORIZED
 
-        description = request.get_json().get('description', '')
-        titel = request.get_json().get('titel', '')
+        description = request.get_json().get('description', '').strip()
+        titel = request.get_json().get('titel', '').strip()
 
         if not validators.length(titel, min=1, max=50):
                 return jsonify({
