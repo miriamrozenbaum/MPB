@@ -11,11 +11,9 @@ posts = Blueprint("posts", __name__, url_prefix="/api/posts")
 
 @posts.get('/')
 @jwt_required()
+#@swag_from("./docs/blog/posts.yaml")
 def get_posts():
     current_user = get_jwt_identity()
-
-    #page = request.args.get('page', 1, type=int)
-    #per_page = request.args.get('per_page', 5, type=int)
 
     posts = Post.query.all()
 
@@ -32,20 +30,12 @@ def get_posts():
             'user_id' : post.user_id,
         })
 
-    #meta = {
-    #    "page": posts.page,
-    #    'pages': posts.pages,
-    #    'total_count': posts.total,
-    #    'prev_page': posts.prev_num,
-    #    'next_page': posts.next_num,
-    #    'has_next': posts.has_next,
-    #    'has_prev': posts.has_prev,
-    #}
 
     return jsonify({'data': data}), HTTP_200_OK
 
 @posts.post('/')
 @jwt_required()
+#@swag_from("./docs/blog/modify_post.yaml")
 def add_post():
 
     try:
@@ -91,6 +81,7 @@ def add_post():
 
 @posts.get("/<int:id>")
 @jwt_required()
+#@swag_from("./docs/blog/posts.yaml")
 def get_post(id):
 
     try:
@@ -118,6 +109,7 @@ def get_post(id):
 
 @posts.delete("/<int:id>")
 @jwt_required()
+#@swag_from("./docs/blog/posts.yaml")
 def delete_post(id):
 
     try:
@@ -147,6 +139,7 @@ def delete_post(id):
 @posts.put('/<int:id>')
 @posts.patch('/<int:id>')
 @jwt_required()
+#@swag_from("./docs/blog/modify_post.yaml")
 def edit_post(id):
 
     try:
@@ -196,7 +189,7 @@ def edit_post(id):
     
 @posts.post('/like/<int:id>')
 @jwt_required()
-@swag_from("./docs/posts/like.yaml")
+#@swag_from("./docs/blog/like.yaml")
 def add_like(id):
 
     try:
@@ -217,11 +210,6 @@ def add_like(id):
         post.likes = post.likes+1
         db.session.commit()
 
-        #post.likes_user.append(current_user)
-
-        #user = User.query.filter_by(id=current_user).first()
-        #user.liked_posts
-
         return jsonify({
             'post_id': like.post_id,
             'user_id': like.user_id,
@@ -235,7 +223,7 @@ def add_like(id):
 
 @posts.delete('/like/<int:id>')
 @jwt_required()
-@swag_from("./docs/posts/like.yaml")
+#@swag_from("./docs/blog/like.yaml")
 def remove_like(id):
 
     try:
