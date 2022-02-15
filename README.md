@@ -58,7 +58,7 @@ In addition, I looked for easy to implement DB as a begginer in Python and Sqlit
 ### Authentication API : http://127.0.0.1:5000/api/auth/
 Routs: (with SWAGGER)
   http://127.0.0.1:5000/api/auth/login
-  *register (POST) - add new User
+  * register (POST) - add new User
     - body:
       username
       email
@@ -70,7 +70,7 @@ Routs: (with SWAGGER)
       
     
   http://127.0.0.1:5000/api/auth/register
-  *login (POST) - retrive JSON Token info
+  * login (POST) - retrive JSON Token info
     - body:
       username
       email
@@ -82,14 +82,14 @@ Routs: (with SWAGGER)
 ### Blog API : http://127.0.0.1:5000/api/posts/
 Routs: (with no SWAGGER)
   http://127.0.0.1:5000/api/posts/
-  *get_posts (GET) - get all posts
+  * get_posts (GET) - get all posts
     - header:
       JWT
     - response:
       200 - get posts
       
   http://127.0.0.1:5000/api/posts/1
-  *get_post (GET) - get post by id
+  * get_post (GET) - get post by id
     - header:
       JWT
     - response:
@@ -97,7 +97,7 @@ Routs: (with no SWAGGER)
       404 - post not found
       
   http://127.0.0.1:5000/api/posts/ 
-  *create_post (POST) - new post with logged on user info
+  * create_post (POST) - new post with logged on user info
     - header:
       JWT
     - body:
@@ -109,7 +109,7 @@ Routs: (with no SWAGGER)
       409 - post already exists
       
    http://127.0.0.1:5000/api/posts/1
-   *edit_post (PUT, PATCH) - edit exists post by id with logged on user info
+   * edit_post (PUT, PATCH) - edit exists post by id with logged on user info
     Authoraized only for created user
     - header:
       JWT
@@ -123,7 +123,7 @@ Routs: (with no SWAGGER)
       404 - post not found
       
    http://127.0.0.1:5000/api/posts/1
-   *delete_post (DELETE) - delete post by id with logged on user info
+   * delete_post (DELETE) - delete post by id with logged on user info
     Authoraized only for created user
     - header:
       JWT
@@ -133,7 +133,7 @@ Routs: (with no SWAGGER)
       404 - post not found
       
    http://127.0.0.1:5000/api/posts/like/1
-   *add_like (POST) - add loke to post by id with logged on user info
+   * add_like (POST) - add loke to post by id with logged on user info
     - header:
       JWT
     - response:
@@ -142,7 +142,7 @@ Routs: (with no SWAGGER)
       409 - like already exists
       
    http://127.0.0.1:5000/api/posts/like/1
-   *remove_like (DELETE) - add loke to post by id with logged on user info
+   * remove_like (DELETE) - add loke to post by id with logged on user info
     Authoraized only for created user
     - header:
       JWT  
