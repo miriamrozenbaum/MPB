@@ -140,7 +140,9 @@ Routs: (with no SWAGGER)
      
 ## RUN Project:
   You should have pip version 21.2.4 installed and Python 3.10.2
+  
   pip install: https://pip.pypa.io/en/stable/cli/pip_install/
+  
   Python setup: https://www.python.org/downloads/
   
   To stat app run the following commands:
