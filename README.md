@@ -1,8 +1,9 @@
 # MPB
 Python REST API
 
-This project is a backend server and DB for blog
-In the solution I used:
+This project is a backend server and DB for blog.
+
+In this solution I used:
 * Python as language
 * Flask for web serive with RESTful API
 * SQLAlchemy as ORM to access DB
