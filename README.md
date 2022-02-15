@@ -141,7 +141,7 @@ Routs: (with no SWAGGER)
 ## RUN Project:
   You should have pip version 21.2.4 installed and Python 3.10.2
   
- * To stat app run the following commands:
+  To stat app run the following commands:
   - pip install -r requirements.txt (only for the first time)
   - python -m flask run 
 
