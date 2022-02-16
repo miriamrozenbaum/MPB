@@ -1,5 +1,5 @@
-# MPB
-Python REST API
+# MPB 
+Python REST API 
 
 This project is a backend server and DB for blog.
 
@@ -9,11 +9,13 @@ In this solution I used:
 * SQLAlchemy as ORM to access DB
 * PyJWT for JWT Authentication
 
+## DB 
+
 I used Sqlite as database 
 after a little research I figured that SQL DB is more suitable for SQLAlchemy ORM that works realy good with flask.
 In addition, I looked for easy to implement DB as a begginer in Python and Sqlite works very well for me the task definition
 
-## DB Design:
+## DB Design
 
 #### User table:
   - id : primeryKey
@@ -37,13 +39,14 @@ In addition, I looked for easy to implement DB as a begginer in Python and Sqlit
   - user_id : ForeignKey to User.id
  
   
-## Arbitrary input rule:
+## Arbitrary input rule
   ### Post title need to be unique
   
-## API documentation:
+## API documentation
 
 ### Authentication API : http://127.0.0.1:5000/api/auth/
-Routs: (with SWAGGER)
+#### Routs: (with SWAGGER)
+
   http://127.0.0.1:5000/api/auth/login
   * register (POST) - add new User
     - body:
@@ -67,7 +70,8 @@ Routs: (with SWAGGER)
         - 401 - wrong credentials
       
 ### Blog API : http://127.0.0.1:5000/api/posts/
-Routs: (with no SWAGGER)
+#### Routs: (with no SWAGGER)
+
   http://127.0.0.1:5000/api/posts/
   * get_posts (GET) - get all posts
     - header:
@@ -97,13 +101,13 @@ Routs: (with no SWAGGER)
       
    http://127.0.0.1:5000/api/posts/1
    * edit_post (PUT, PATCH) - edit exists post by id with logged on user info
-    Authoraized only for created user
-    - header:
+     *Authoraized only for created user
+     - header:
         - JWT
-    - body:
+     - body:
         - titel ( > 1 , < 100 , unique)
         - description ( > 1 , < 1000 )
-    - response:
+     - response:
         - 200 - post edited
         - 400 - not valid data request
         - 401 - not authoraized
@@ -111,34 +115,34 @@ Routs: (with no SWAGGER)
       
    http://127.0.0.1:5000/api/posts/1
    * delete_post (DELETE) - delete post by id with logged on user info
-    Authoraized only for created user
-    - header:
+     *Authoraized only for created user
+     - header:
         - JWT
-    - response:
+     - response:
         - 204 - post deleted
         - 401 - not authoraized
         - 404 - post not found
       
    http://127.0.0.1:5000/api/posts/like/1
-   * add_like (POST) - add loke to post by id with logged on user info
-    - header:
+   * add_like (POST) - add like to post by id with logged on user info
+     - header:
         - JWT
-    - response:
+     - response:
         - 201 - new like created
         - 404 - post not found
         - 409 - like already exists
       
    http://127.0.0.1:5000/api/posts/like/1
    * remove_like (DELETE) - add loke to post by id with logged on user info
-    Authoraized only for created user
-    - header:
+    *Authoraized only for created user
+     - header:
         - JWT  
-    - response:
+     - response:
         - 204 - like deleted
         - 401 - not authoraized
         - 404 - like not found
      
-## RUN Project:
+## RUN Project
   You should have pip version 21.2.4 installed and Python 3.10.2
   
   pip install: https://pip.pypa.io/en/stable/cli/pip_install/
@@ -149,12 +153,12 @@ Routs: (with no SWAGGER)
   - pip install -r requirements.txt (only for the first time)
   - python -m flask run 
 
-## TEST Project:
+## TEST Project
   Postman link: https://www.getpostman.com/collections/defe8d6cde59aa0e942f
   
   Also will shared by Email
   
-### Develop localy and publish on GitHub
+#### Develop localy on VSCode and published to GitHub
   
 
       
